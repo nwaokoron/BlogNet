@@ -1,0 +1,10 @@
+<p> Enter login info</p>
+<form action="/login/" method="post"> 
+{% csrf_token %}  
+	<label for="username"> username </label>
+	<input id="username" type="text" name="username"
+	value="{{'name'|default:'username'}}" >
+	<label for="password" > password </label>
+	<input id="password" type="text" name="password" value=" password">
+	<input id="submit_btn" type="submit" value="sign in" >
+</form>

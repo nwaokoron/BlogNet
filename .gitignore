@@ -1,0 +1,9 @@
+*.swp
+/scamBlogR
+/scamBlastR/*
+!/scamBlastR/urls.py
+/scamBlastRApp/migrations/
+*.pyo
+scamBlastRApp/__pycache__/
+*.pyc
+

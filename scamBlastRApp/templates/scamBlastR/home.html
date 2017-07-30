@@ -1,0 +1,17 @@
+<h1> Let's Blast Some Scams </h1>
+<h5> Top Scams </h5>
+{% if context %}
+    <ul> 
+    {% for q in context %}
+      <li>   {{ q.post_content }} 
+        <ul> 
+            {% for comment in q.comments_set.all %} 
+                <li> {{comment.comment_content}} </li> 
+            {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+    </ul>
+{% else %} 
+    <p> There are no Posts at the moment. </p> 
+{% endif %}
