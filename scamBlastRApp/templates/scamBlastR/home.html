@@ -1,11 +1,18 @@
 <h1> Let's Blast Some Scams </h1>
+<h3> Welcome: {{username}} </h3>
+    <p> 
+        <form action="/home/" method="post">
+            {% csrf_token %}  
+            <input id="sign_out_btn" type="submit" name="sign_out" value="sign out" >
+        </form>
+    </p>
 <h5> Top Scams </h5>
 {% if context %}
     <ul> 
     {% for q in context %}
       <li>   {{ q.post_content }} 
         <ul> 
-            {% for comment in q.comments_set.all %} 
+            {% for comment in q.comment_set.all %} 
                 <li> {{comment.comment_content}} </li> 
             {% endfor %}
         </ul>

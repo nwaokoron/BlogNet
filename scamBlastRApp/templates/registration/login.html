@@ -3,8 +3,10 @@
 {% csrf_token %}  
 	<label for="username"> username </label>
 	<input id="username" type="text" name="username"
-	value="{{'name'|default:'username'}}" >
+	value="{{username}}" >
 	<label for="password" > password </label>
-	<input id="password" type="text" name="password" value=" password">
-	<input id="submit_btn" type="submit" value="sign in" >
+	<input id="password" type="password" name="password" value="{{password}}">
+	<input id="submit_btn" type="submit" value="Sign-In" >
+        <input id="var_next" type="hidden" name = "next"  value="{{next}}">
+        <p style="color:red"> {{error_msg}} </p>
 </form>

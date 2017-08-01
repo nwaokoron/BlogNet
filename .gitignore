@@ -1,4 +1,4 @@
-*.swp
+.*.swp
 /scamBlogR
 /scamBlastR/*
 !/scamBlastR/urls.py
@@ -6,4 +6,4 @@
 *.pyo
 scamBlastRApp/__pycache__/
 *.pyc
-
+.*.swo
