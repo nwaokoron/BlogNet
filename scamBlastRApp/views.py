@@ -6,6 +6,9 @@ from . import models
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login as log_in, authenticate, logout
 # Create your views here.
+def index(request):
+    return render(request,"scamBlastR/base.html",{} )
+
 # return render(request, 'polls/index.html', context) instead of httpReponse
 @login_required(login_url ="/login/")
 #@login_required()

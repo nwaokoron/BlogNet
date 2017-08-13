@@ -5,4 +5,5 @@ from django.contrib.auth import views as auth_views
 app_name = "scamBlastRApp"
 urlpatterns = [ url(r'^home/$', views.home, name='home'),
                 url(r'^login/$', views.login, name='login'),
+                url(r'^$', views.index, name='index'),
               ]
